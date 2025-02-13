@@ -4,47 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* General Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       background-color: #f4f4f9;
       color: #333;
     }
-
     header {
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
       padding: 1.5rem;
       text-align: center;
     }
-
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.7rem;
     }
-
     header p {
       font-size: 1.2rem;
       margin-bottom: 0;
     }
-
     section {
       margin: 2rem auto;
-      padding: 2.9rem;
+      padding: 2rem;
       max-width: 900px;
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
     section h2 {
       margin-bottom: 1rem;
       font-size: 1.8rem;
@@ -52,27 +46,49 @@
       display: inline-block;
       padding-bottom: 0.5rem;
     }
-
     .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
       text-align: center;
+    } 
+    .photo-container {
+      background-color: #8B4513; 
+      width: 160px; 
+      height: 160px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center;
+      justify-content: center;
     }
 
     .about img {
-      border-radius: 50%;
+      border-radius: 50%; 
       width: 150px;
       height: 150px;
       object-fit: cover;
-      margin-bottom: 0rem;
     }
-
+    
+    .about h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem; 
+    }
+    .about p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0; 
+    }
+    .skills {
+      text-align: center; 
+    }
     .skills ul {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+      padding: 0; 
     }
-
     .skills ul li {
       background: #2575fc;
       color: white;
@@ -80,30 +96,53 @@
       border-radius: 20px;
       font-size: 1rem;
     }
-
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      text-align: center; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+    .projects h2 {
+      margin-bottom: 20px; 
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+      gap: 20px;
+      width: 100%;
+    }
     .project {
+      width: 80%; 
+      max-width: 400px; 
       border: 1px solid #ddd;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
-
+    .project:hover {
+      transform: scale(1.05);
+    }
     .project img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
-
     .project div {
       padding: 1rem;
     }
-
+    .resume {
+      text-align: center; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .resume h2 {
+      margin-bottom: 15px; 
+    }
     .resume a {
       display: inline-block;
       text-decoration: none;
@@ -113,46 +152,69 @@
       border-radius: 5px;
       transition: background 0.3s;
     }
-
     .resume a:hover {
       background: #2575fc;
     }
-
     .contact {
       text-align: center;
     }
-
     .contact a {
       text-decoration: none;
       color: #2575fc;
       font-size: 1.1rem;
     }
-
     footer {
       text-align: center;
       margin-top: 2rem;
       padding: 1rem;
       background: #333;
-      color: white;
+      color: whitesmoke;
     }
-
     footer p {
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about img {
+        width: 120px; 
+        height: 120px;
+      }
+      .about h2 {
+        font-size: 1.5rem; 
+      }
+      .about p {
+        font-size: 0.9rem; 
+      }
+      section {
+        padding: 1rem;
+      }
+      .skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Harshvardhan </h1>
-    <p>Web Developer | Designer | Creator</p>
+    <h1>Harshvardhan</h1>
+    <p>Web Developer | Designer | Devops Engineer</p>
   </header>
-
   <section class="about">
+    <div class="photo-container">
+    <img src="Profile-image.jpg" alt="Profile Picture">
+  </div>
     <h2>About Me</h2>
-    <img src="WhatsApp Image 2025-01-24 at 01.19.51.jpeg" alt="Profile Picture">
-    <p>Hello! I am Harshvardhan, a passionate web developer specializing in creating beautiful and functional websites. I enjoy learning and experimenting with the latest technologies.</p>
+    <p>Hello! I am Harshvardhan, a passionate web developer specializing in creating beautiful and functional websites. I enjoy learning and experimenting with the latest technologies.I am an enthusiastic Computer Science Engineering student pursuing my Bachelor's degree at Chandigarh University (July 2021 - June 2025) with a focus on DevOps. I am a highly motivated beginner in engineering, eager to gain practical experience in the fields of software development, operations, and analysis in DevOps.I have a strong grasp of C++, Python and Java .I'm currently expanding my skills in AWS Cloud. Passionate about bridging development and operations, I'm eager to apply my knowledge to real-world scenarios. I’m constantly learning and embracing new technologies to stay at the forefront of web development.</p>
   </section>
-
   <section class="skills">
     <h2>Skills</h2>
     <ul>
@@ -164,38 +226,54 @@
       <li>Python</li>
     </ul>
   </section>
-
   <section class="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <img src="https://via.placeholder.com/300x150" alt="Project 1">
-      <div>
-        <h3>Project 1</h3>
-        <p>Cryptocurrency – Price Prediction and Analysis.</p>
+    <div class="project-container">
+      <div class="project">
+        <img src="project image.webp" alt="Project 1">
+        <div>
+          <h3>Project 1</h3>
+          <p>Cryptocurrency – Price Prediction and Analysis.</p>
+        </div>
       </div>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/300x150" alt="Project 2">
-      <div>
-        <h3>Project 2</h3>
-        <p>Learner Lang – Understanding languages Analysis.</p>
+      <div class="project">
+        <img src="project image 1.webp" alt="Project 2">
+        <div>
+          <h3>Project 2</h3>
+          <p>Learner Lang – Understanding languages Analysis.</p>
+        </div>
       </div>
     </div>
   </section>
-
   <section class="resume">
     <h2>Resume</h2>
-    <a href="Resume Harshvardhan.pdf" download>Download My Resume</a>
+    <a href="Harshvardhan Resume.pdf" download aria-label="Download Resume">Download My Resume</a>
   </section>
-
   <section class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:harshvardhank33@gmail.com">harshvardhank33@gmail.com</a></p>
-    <p>Phone: <a href="tel:6204392832">6204392832</a></p>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:harshvardhank33@gmail.com">harshvardhank33@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> Phone: <a href="tel:6204392832">6204392832</a></p>
   </section>
-
   <footer>
-    <p>&copy; 2025 Harshvardhan. All Rights Reserved.</p>
+    <p>&copy; <span id="currentYear"></span> Harshvardhan. All Rights Reserved.</p>
   </footer>
+  <script>
+   
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    
+    window.addEventListener('resize', function() {
+      var projects = document.querySelectorAll('.project');
+      if (window.innerWidth <= 768) {
+        projects.forEach(function(project) {
+          project.style.width = "100%"; 
+        });
+      } else {
+        projects.forEach(function(project) {
+          project.style.width = "80%"; 
+        });
+      }
+    });
+  </script>
 </body>
 </html>
