@@ -38,10 +38,6 @@ Contact Section – Easy way to reach out via email or phone
 
 To run this project locally, follow these steps:
 
-Clone the repository:
-
-git clone https://github.com/your-github-username/portfolio.git
-
 Navigate to the project folder:
 
 cd portfolio
